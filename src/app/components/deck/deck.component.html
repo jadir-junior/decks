@@ -1,0 +1,26 @@
+<div>
+  <div class="text-2xl font-bold text-white">{{ deck.name }}</div>
+  <div
+    class="flex justify-center my-2 w-52 rounded-2xl transform transition duration-300 hover:scale-105"
+  >
+    <img
+      src="assets/images/deck.jpg"
+      (click)="onClick.emit(deck.id)"
+      class="cursor-pointer"
+    />
+  </div>
+  <div class="flex gap-2 mt-6">
+    <button
+      class="bg-primary py-2 rounded-xl font-bold hover:bg-primary-light w-full transition-colors text-xs"
+      (click)="onEdit.emit(deck.id)"
+    >
+      Editar
+    </button>
+    <button
+      class="bg-primary py-2 rounded-xl font-bold hover:bg-primary-light w-full transition-colors text-xs"
+      (click)="onRemove.emit(deck.id)"
+    >
+      Deletar
+    </button>
+  </div>
+</div>

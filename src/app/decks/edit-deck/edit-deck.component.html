@@ -1,0 +1,73 @@
+<div class="border-b border-gray-700">
+  <header class="mb-6 py-6 container mx-auto">
+    <app-header-name [title]="deck.name"></app-header-name>
+    <div class="flex justify-end">
+      <button
+        (click)="saveDeck()"
+        class="bg-primary py-4 px-12 text-xs rounded-xl font-bold hover:bg-primary-light transition-colors"
+      >
+        Salvar baralho
+      </button>
+    </div>
+  </header>
+</div>
+
+<div class="bg-[#0E0E11] py-8">
+  <div class="flex container mx-auto">
+    <div class="w-96 mr-4 text-sm">
+      <div class="mb-4 flex gap-2">
+        <app-badge [value]="deckCards.length"></app-badge>
+        <span class="font-bold text-white"> total de cards </span>
+      </div>
+      <div
+        *ngFor="let deckCard of deckCards; let i = index"
+        class="p-2 text-xs text-white my-1 flex justify-between items-center w-52 bg-[#1E1E27] border-[#1E1E27] rounded-lg"
+      >
+        {{ deckCard.name }}
+        <button (click)="removeCardToDeck(deckCard, i)">
+          <svg
+            class="w-4 h-4 text-white dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="w-full">
+      <div class="mb-4">
+        <app-search (onSearchChange)="onSearch($event)" />
+      </div>
+      <div
+        class="flex gap-4 flex-wrap"
+        infiniteScroll
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="50"
+        (scrolled)="onScroll()"
+      >
+        <div *ngFor="let card of cards" class="w-44 mx-auto">
+          <img [src]="card.images.small" [alt]="card.name" loading="eager" />
+          <button
+            class="bg-primary text-xs py-4 px-4 rounded-xl font-bold hover:bg-primary-light w-full transition-colors mt-4"
+            (click)="addCardToDeck(card)"
+          >
+            Adicionar ao baralho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<igx-toast #toast>{{ errorMessage }}</igx-toast>

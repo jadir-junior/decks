@@ -1,0 +1,17 @@
+<div class="container mx-auto">
+  <app-create-deck></app-create-deck>
+</div>
+
+<div class="flex gap-4 flex-wrap mt-6 container mx-auto">
+  <app-deck
+    [deck]="deck"
+    *ngFor="let deck of decks"
+    (onEdit)="edit($event)"
+    (onRemove)="remove($event)"
+    (onClick)="details($event)"
+  ></app-deck>
+</div>
+
+<div *ngIf="!decks.length" class="container mx-auto w-full">
+  <app-no-itens></app-no-itens>
+</div>

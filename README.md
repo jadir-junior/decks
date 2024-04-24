@@ -16,7 +16,7 @@ A tela abaixo é a inicial sem nenhum baralho, com um input para sua criação.
 
 ![Tela Inicial](documentation/images/tela-deck-sem-cards-1.png)
 
-Apos criar os baralhos será semelhante a imagem abaixo
+Após criar os baralhos será semelhante à imagem abaixo
 
 - O botão de editar irá para a página de edição.
 - O botão de deletar irá remover o baralho.
@@ -26,9 +26,9 @@ Apos criar os baralhos será semelhante a imagem abaixo
 
 ## Tela de edição e customização das cartas do baralho.
 
-- Adicione no minímo 24 cartas ou no máximo 60 e **clique no botão salvar**
+- Adicione no mínimo 24 cartas ou no máximo 60 e **clique no botão salvar**
 - As cartas são carregadas de forma de paginação com o recurso "infinite scroll", como se fosse uma timeline.
-- o painel lateral serve para ver a quantidade de cartas e as cartas selecionada, caso repita o mais 4 vezes o nome, é possivel remove-la.
+- o painel lateral serve para ver a quantidade de cartas e as cartas selecionada, caso repita mais de 4 vezes o nome, é possível removê-la.
 
 ![Tela Inicial](documentation/images/tela-editcards-1.png)
 

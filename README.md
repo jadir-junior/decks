@@ -14,7 +14,7 @@ Rode `ng build` para fazer build do projeto. O artefatos do build irá ser salvo
 
 A tela abaixo é a inicial sem nenhum baralho, com um input para sua criação.
 
-![Tela Inicial]('documentation/images/tela-deck-sem-cards-1.png')
+![Tela Inicial](documentation/images/tela-deck-sem-cards-1.png)
 
 Apos criar os baralhos será semelhante a imagem abaixo
 
@@ -22,7 +22,7 @@ Apos criar os baralhos será semelhante a imagem abaixo
 - O botão de deletar irá remover o baralho.
 - **Clicando na foto** do baralho irá para a tela de detalhes.
 
-![Tela Inicial]('documentation/images/tela-deck-com-cards-1.png')
+![Tela Inicial](documentation/images/tela-deck-com-cards-1.png)
 
 ## Tela de edição e customização das cartas do baralho.
 
@@ -30,8 +30,8 @@ Apos criar os baralhos será semelhante a imagem abaixo
 - As cartas são carregadas de forma de paginação com o recurso "infinite scroll", como se fosse uma timeline.
 - o painel lateral serve para ver a quantidade de cartas e as cartas selecionada, caso repita o mais 4 vezes o nome, é possivel remove-la.
 
-![Tela Inicial]('documentation/images/tela-editcards-1.png')
+![Tela Inicial](documentation/images/tela-editcards-1.png)
 
 ## Tela de visualização.
 
-![Tela Inicial]('documentation/images/visualizacao-cards.png')
+![Tela Inicial](documentation/images/visualizacao-cards.png)

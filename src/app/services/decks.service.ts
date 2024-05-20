@@ -1,4 +1,4 @@
-import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { Card } from './card.service';
 import { LocalStorageService } from './local-storage.service';
 import { Injectable } from '@angular/core';
@@ -15,7 +15,7 @@ export interface Deck {
   providedIn: 'root',
 })
 export class DecksService {
-  private onDecksChange = new BehaviorSubject(undefined);
+  private onDecksChange = new Subject<void>();
   onDecksChange$ = this.onDecksChange.asObservable();
 
   constructor(private LS: LocalStorageService<Deck>) {}
@@ -24,7 +24,7 @@ export class DecksService {
     const decks = this.LS.getItem(DECKS);
     decks.push(deck);
     this.LS.setItem(DECKS, decks);
-    this.onDecksChange.next(undefined);
+    this.onDecksChange.next();
   }
 
   findAll(): Deck[] {

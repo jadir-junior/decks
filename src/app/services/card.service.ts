@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pagination } from '../models/pagination';
 import pokemon from 'pokemontcgsdk';
@@ -122,7 +121,7 @@ export interface Card {
   providedIn: 'root',
 })
 export class CardService {
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   getCards(page = 1, search = ''): Promise<Pagination<Card[]>> {
     return pokemon.card.where({
